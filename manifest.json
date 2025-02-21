@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Greenhouse Application Autofiller",
+  "version": "1.0",
+  "description": "Automatically fills out Greenhouse job applications with your information",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["https://*.greenhouse.io/*"],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.greenhouse.io/*"],
+      "js": ["assets/content.js"]
+    }
+  ]
+}
